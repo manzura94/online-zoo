@@ -117,19 +117,69 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      div {
+
+      .donate-choose-item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // width: 100px;
+      }
+
+      .donate-choose-item:first-child{
+       justify-content: flex-start;
+      }
+
+      .donate-choose-item:last-child{
+        justify-content: flex-end;
+
+      }
+
+      .donate-choose__btn {
         background: #72828e;
         height: 2px;
         width: 95%;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        span {
+        .yellow-spot {
           width: 10px;
           height: 10px;
           background: #ffee2e;
           border-radius: 50%;
+          position: relative;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+          &:hover{
+            background-color: orange;
+          }
         }
+        .yellow-spot.active-btn{
+         &::before{
+          content: '';
+          position: absolute;
+          width: 23px;
+          height: 23px;
+          border-radius: 50%;
+          border: 2px solid orange;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+
+         }
+         &::after{
+          content: '';
+          position: absolute;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          border: 2px solid orange;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+         }
+        }
+
+  
       }
     }
     .donate-numbers {
@@ -162,6 +212,14 @@
       border: 1px solid #929699;
       border-radius: 2px;
       padding: 15px 10px;
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
       input {
         background: transparent;
         border: none;
@@ -214,191 +272,11 @@
   }
 }
 
-// .donate__container {
-//   &-title {
-//     font-style: normal;
-//     font-weight: 400;
-//     font-size: 34px;
-//     line-height: 130%;
-//     color: #ffffff;
-//     margin-bottom: 10px;
-//   }
-//   &-text {
-//     font-style: normal;
-//     font-weight: 500;
-//     font-size: 16px;
-//     line-height: 140%;
-//     color: #ffffff;
-//   }
-//   &-subtitle {
-//     font-style: normal;
-//     font-weight: 400;
-//     font-size: 36px;
-//     line-height: 130%;
-//     color: #fe9013;
-//     margin: 40px 0 60px;
-//   }
-//   .donate__info {
-//     background: rgba(255, 255, 255, 0.52);
-//     backdrop-filter: blur(2px);
-//     border-radius: 20px;
-//     padding: 40px 92px 60px;
-//     &-title {
-//       font-style: normal;
-//       font-weight: 400;
-//       font-size: 48px;
-//       line-height: 120%;
-//       text-align: center;
-//       color: #fe9013;
-//       margin-bottom: 20px;
-//     }
-//     &-text {
-//       font-style: normal;
-//       font-weight: 400;
-//       font-size: 24px;
-//       line-height: 120%;
-//       color: #333b41;
-//     }
-//     .panda-section {
-//       display: flex;
-//       align-items: center;
-//       justify-content: center;
-//       gap: 20px;
-//       &__image {
-//         margin-left: 30px;
-//       }
-//       .number {
-//         font-style: normal;
-//         font-weight: 500;
-//         font-size: 72px;
-//         line-height: 80%;
-//         text-align: center;
-//         text-transform: uppercase;
-//         color: #000000;
-//         margin-bottom: 11px;
-//       }
-//       .numbers-text {
-//         font-style: normal;
-//         font-weight: 400;
-//         font-size: 16px;
-//         line-height: 140%;
-//         text-align: center;
-//         color: #333b41;
-//       }
-//     }
-//     .donate-amount-text {
-//       font-style: normal;
-//       font-weight: 400;
-//       font-size: 16px;
-//       line-height: 140%;
-//       color: #000000;
-//     }
-//     .donate-amount {
-//       margin: 40px 0 50px;
-//     }
-//     .donate-line {
-//       background: #404950;
-//       border-radius: 2px;
-//       height: 27px;
-//       width: 100%;
-//       margin: 12px 0;
-//       display: flex;
-//       align-items: center;
-//       justify-content: center;
-//       }
-//       div {
-//         background: #72828e;
-//         height: 2px;
-//         width: 95%;
-//         display: flex;
-//         align-items: center;
-//         justify-content: space-between;
-//         span {
-//           width: 10px;
-//           height: 10px;
-//           background: #ffee2e;
-//           border-radius: 50%;
-//         }
-//       }
-//     }
-//     .donate-numbers {
-//       width: 100%;
-//       display: flex;
-//       align-items: center;
-//       justify-content: space-between;
 
-//       span {
-//         font-style: normal;
-//         font-weight: 500;
-//         font-size: 26px;
-//         line-height: 140%;
-//         text-transform: uppercase;
-//         color: #333b41;
-//       }
-//       .orange {
-//         color: orange;
-//       }
-//     }
-//     .donate-inputs {
-//       margin: 0 auto;
-//       display: flex;
-//       flex-direction: column;
-//       justify-content: center;
-//       align-items: center;
-//     }
-//     .donate-input {
-//       display: flex;
-//       align-items: center;
-//       border: 1px solid #929699;
-//       border-radius: 2px;
-//       padding: 15px 10px;
-//       input {
-//         background: transparent;
-//         border: none;
-//         outline: none;
-//         color: #929699;
-//         padding: 8px;
-//         font-size: 16px;
-//       }
-//     }
-//     .choice-input {
-//       margin: 20px auto 30px;
-//       display: flex;
-//       align-items: center;
-//       gap: 15px;
-//       div {
-//         label {
-//           font-style: normal;
-//           font-weight: 400;
-//           font-size: 16px;
-//           line-height: 140%;
-//           color: #333b41;
-//         }
-//         input[type="radio"] {
-//           -webkit-appearance: none;
-//           -moz-appearance: none;
-//           appearance: none;
-//           display: inline-block;
-//           width: 15px;
-//           height: 15px;
-//           padding: 1px;
-//           background-clip: content-box;
-//           border: 1px solid orange;
-//           background-color: transparent;
-//           border-radius: 50%;
-//           cursor: pointer;
-//         }
-//         input[type="radio"]:checked {
-//           background-color: orange;
-//         }
-//       }
-//     }
-//     .donate-text {
-//       font-style: normal;
-//       font-weight: 400;
-//       font-size: 16px;
-//       line-height: 140%;
-//       color: #333b41;
-//       margin-top: 30px;
-//     }
-// }
+
+
+
+
+
+
+

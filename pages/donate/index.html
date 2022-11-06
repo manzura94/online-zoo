@@ -14,10 +14,7 @@
           <div class="header-right">
             <a href="../main/index.html">
               <div class="header__logo">
-                <img
-                  src="../../assets/icons/logo_footer.svg"
-                  alt="logo image"
-                />
+                <h1>PetStory Online</h1>
               </div>
             </a>
             <nav class="header-navbar">
@@ -94,15 +91,38 @@
               <div class="donate-amount">
                 <span class="donate-amount-text">Amount</span>
                 <div class="donate-line">
-                  <div>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                  <div class="donate-choose__btn">
+                    <div class="donate-choose-item">
+                      <span class="yellow-spot "></span>
+                    </div>
+                    <div class="donate-choose-item">
+                      <span class="yellow-spot "></span>
+                    </div>
+                    <div class="donate-choose-item">
+                      <span class="yellow-spot active-btn"></span>
+                    </div>
+                    <div class="donate-choose-item">
+                      <span class="yellow-spot "></span>
+                    </div>
+                    <div class="donate-choose-item">
+                      <span class="yellow-spot "></span>
+                    </div>
+                    <div class="donate-choose-item">
+                      <span class="yellow-spot "></span>
+                    </div>
+                    <div class="donate-choose-item">
+                      <span class="yellow-spot "></span>
+                    </div>
+                    <div class="donate-choose-item">
+                      <span class="yellow-spot "></span>
+                    </div>
+                    <!-- <span class="yellow-spot active-btn"></span>
+                    <span class="yellow-spot"></span>
+                    <span class="yellow-spot"></span>
+                    <span class="yellow-spot"></span>
+                    <span class="yellow-spot"></span>
+                    <span class="yellow-spot"></span>
+                    <span class="yellow-spot"></span> -->
                   </div>
                 </div>
                 <div class="donate-numbers">
@@ -116,9 +136,9 @@
                   <span>$25</span>
                 </div>
               </div>
-              <div class="donate-inputs">
+              <form class="donate-inputs">
                 <div class="donate-input">
-                  <input type="text" placeholder="Another amount" />
+                  <input type="number" placeholder="Another amount" required/>
                   <img
                     src="../../assets/icons/dollarsign.svg"
                     alt="dollarsign image"
@@ -130,15 +150,15 @@
                     <label for="monthly">Monthly</label>
                   </div>
                   <div>
-                    <input type="radio" id="once" name="payment" value="type2"/>
+                    <input type="radio" id="once" name="payment" value="type2" checked/>
                     <label for="once">Once</label>
                   </div>
                 </div>
-                <div class="button-orange orange-button">Feed a friend now</div>
+                <button class="button-orange orange-button">Feed a friend now</button>
                 <div class="donate-text">
                   Share with your friends on social networks
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </section>
@@ -226,10 +246,10 @@
           </div>
           <div class="footer-right">
             <h4 class="footer-right-title">Subscribe to our news</h4>
-            <div class="footer-right-submit">
-              <input type="email" placeholder="Enter your email" />
+            <form class="footer-right-submit">
+              <input type="email" placeholder="Enter your email" required />
               <button class="footer-right-submit-button">submit</button>
-            </div>
+            </form>
             <div class="footer-right-bottom">
               <span class="footer-bottom-info"
                 >Designed by Alisa Samborskaya</span
