@@ -28,4 +28,9 @@
   &:hover{
     background-color: orangered;
   }
+
+  @media (max-width:350px){
+    padding: 16px 36px;
+    font-size: 14px;
+  }
 }
